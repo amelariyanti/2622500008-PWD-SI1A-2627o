@@ -21,9 +21,9 @@ Nama / NIM: Amelariyanti / 2622500008
 | Tahap | Kode / perubahan | Hasil aktual | Commit |
 |---|---|---|---|
 | C.1-C.4 Tag PHP, komentar, echo/print, HTML statis vs PHP | potongan uji sementara | [ISI: dikerjakan atau tidak; tulis hasil yang benar-benar dilihat] | - |
-| D.1 Variabel | $nim = "2622500051", $namaMahasiswa = "Serin Ariestia Rafka", $programStudi = "SI", $tahunAkademik = "2026/2027", $semester = 2, $ipk = 3.75, $statusAktif = true, $catatanTambahan = null | Halaman tampil tanpa galat PHP | [ISI] |
+| D.1 Variabel | $nim = "2622500008", $namaMahasiswa = "Amel Ariyanti", $programStudi = "Sistem Informasi", $tahunAkademik = "2026/2027", $semester = 2, $ipk = 3.75, $statusAktif = true, $catatanTambahan = null | Halaman tampil tanpa galat PHP | [ISI] |
 | D.2 Konstanta | NAMA_MATA_KULIAH, PROFIL_GITHUB | Halaman tampil tanpa galat PHP | [ISI] |
-| D.4 Tampil variabel/konstanta | paragraf Selamat Datang | Tampil: "Halo, saya Serin Ariestia Rafka. Saya sedang mempelajari mata kuliah Pemrograman Web Dasar pada tahun akademik 2026/2027." Tautan GitHub: [ISI SETELAH DIKLIK] | [ISI] |
+| D.4 Tampil variabel/konstanta | paragraf Selamat Datang | Tampil: "Halo, saya Amel Ariyanti. Saya sedang mempelajari mata kuliah Pemrograman Web Dasar pada tahun akademik 2026/2027." Tautan GitHub: [ISI SETELAH DIKLIK] | [ISI] |
 | E.1 Aritmetika | $sisaSemester = $batasSemester - $semester | Tampil "Sisa semester hingga batas: 6" | [ISI] |
 | E.2-E.3 Perbandingan & logika | $semesterValid, $statusSemester | Dengan semester 2: "Sesuai rentang". Uji semester 9: [ISI SETELAH DIUJI] | [ISI] |
 | F.1 if-elseif-else | $keteranganSemester | Semester 2: "Semester: 2 (Semester awal)". Uji 4 dan 7: [ISI SETELAH DIUJI] | [ISI] |
