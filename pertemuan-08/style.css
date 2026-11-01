@@ -1,0 +1,124 @@
+body {
+
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: url(background.jpg);
+}
+
+header {
+    background-color: rgb(247, 93, 142);
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 15%;
+    background-color:rgb(239, 188, 195);
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: rgb(68, 68, 145);
+    text-decoration: none;
+    margin-bottom: 100px;
+}
+
+.content {
+    width: 85;
+    background-image: url(background.jpg);
+    background-size: cover;
+    padding: 20px;
+    min-height: 500px;
+    color: black;
+}
+
+.content h2 {
+    text-align: center;
+}
+
+.gambar-dessert {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px;
+}
+
+.gambar-dessert h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.gambar-dessert {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.gambar-dessert img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.tabel-menu {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: white
+}
+
+th{
+    background-color: rgb(247, 93, 142) ;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    background-color:rgb(239, 188, 195);
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.content.profil {
+    background-image: url(background.jpg);
+    background-size: cover;
+    color: black;
+    min-height: 500px;
+}
+
+.content.profil h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-left: 20px;
+    display: block;
+}
+
+.biodata {
+    margin-top: 15px;
+    line-height: 28px;
+}
+
+
+footer{
+    background-image: url(background.jpg);
+    color: black;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+}
