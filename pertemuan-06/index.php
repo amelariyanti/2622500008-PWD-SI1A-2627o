@@ -1,7 +1,6 @@
 <?php
-// P6: PHP dasar dan pemrograman sisi peladen
 
-// Bagian 1: Variabel dan konstanta
+
 $nim = "2622500008";
 $namaMahasiswa = "Amelariyanti";
 $programStudi = "SI";
@@ -13,7 +12,7 @@ $catatanTambahan = null;
 
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
 
-// Bagian 2: Operator
+
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <= $batasSemester;
@@ -21,7 +20,7 @@ $statusSemester = ($semesterValid && $statusAktif)
     ? "Sesuai rentang"
     : "Perlu diperiksa";
 
-// Bagian 3: Percabangan if-elseif-else
+
 if ($semester < 3) {
     $keteranganSemester = "Semester awal";
 } elseif ($semester <= 6) {
@@ -30,12 +29,12 @@ if ($semester < 3) {
     $keteranganSemester = "Semester akhir";
 }
 
-// Bagian 4: Nama program studi dengan operator ternary
+
 $namaProdi = ($programStudi == "SI")
     ? "Sistem Informasi"
     : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
 
-// Bagian 5: Percabangan switch-case-default
+
 switch ($programStudi) {
     case "SI":
         $fokusProgramStudi = "Sistem informasi dan proses bisnis";
@@ -47,7 +46,7 @@ switch ($programStudi) {
         $fokusProgramStudi = "Belum ditentukan";
 }
 
-// Status mahasiswa dengan operator ternary
+
 $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
 ?>
 
@@ -130,8 +129,8 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
           <h3>Target Belajar (Perulangan for)</h3>
           <ol>
             <?php
-            // Perulangan for tanpa array; materi larik dibahas pada P9.
-            for ($i = 1; $i <= 5; $i++) {
+            
+        for ($i = 1; $i <= 5; $i++) {
                 echo "<li>Target belajar ke-" . $i . ": ";
 
                 switch ($i) {
