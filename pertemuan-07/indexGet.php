@@ -1,26 +1,49 @@
 <?php
+// P7: penggunaan GET
+if (isset($_GET['nama'])) {
+  $nama = $_GET['nama'];
+  echo "Nama yang diterima:" . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8') . "<br>";
 
+   // P6: PHP dasar dan pemrograman sisi peladen
+   // Bagian 1: Variabel dan konstanta
+    $nama = htmlspecialchars($_GET['nama']);
+    $email = htmlspecialchars($_GET['email']);
+    $semester = htmlspecialchars($_GET['semester']);
+    $tanggal = htmlspecialchars($_GET['tanggal']);
+    $jenisPesan = isset($_GET['jenis_pesan']) ? htmlspecialchars($_GET['jenis_pesan']) : '';
+    $minat = isset($_GET['minat']) ? $_GET['minat'] : [];
+    $prodi = htmlspecialchars($_GET['prodi']);
+    $pesan = htmlspecialchars($_GET['pesan']);
 
+    // Menampilkan data yang diterima dari form
+    echo "<h2>Data yang Diterima:</h2>";
+    echo "<p>Nama: $nama</p>";
+    echo "<p>Email: $email</p>";
+    echo "<p>Semester: $semester</p>";
+    echo "<p>Tanggal Kunjungan: $tanggal</p>";
+    echo "<p>Jenis Pesan: $jenisPesan</p>";
+    echo "<p>Topik yang Diminati: " . implode(", ", $minat) . "</p>";
+    echo "<p>Program Studi: $prodi</p>";
+    echo "<p>Pesan: $pesan</p>";
+}
 $nim = "2622500008";
-$namaMahasiswa = "Amelariyanti";
+$namaMahasiswa = "Amel Aryanti";
 $programStudi = "SI";
 $tahunAkademik = "2026/2027";
-$semester = 2;
+$semester = 1;
 $ipk = 3.75;
 $statusAktif = true;
 $catatanTambahan = null;
 
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
-
-
+const PROFIL_GITHUB = "amelariyanti";
+// Bagian 2: Operator
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <= $batasSemester;
-$statusSemester = ($semesterValid && $statusAktif)
-    ? "Sesuai rentang"
-    : "Perlu diperiksa";
+$statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "perlu diperiksa";
 
-
+// Bagian 3: Percabangan if-elseif-else
 if ($semester < 3) {
     $keteranganSemester = "Semester awal";
 } elseif ($semester <= 6) {
@@ -28,13 +51,14 @@ if ($semester < 3) {
 } else {
     $keteranganSemester = "Semester akhir";
 }
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya"); 
 
-
+// Bagian 4: Nama program studi dengan operator ternary
 $namaProdi = ($programStudi == "SI")
     ? "Sistem Informasi"
     : (($programStudi == "TI") ? "Teknik Informatika" : "Lainnya");
 
-
+// Bagian 5: Percabangan switch-case-default
 switch ($programStudi) {
     case "SI":
         $fokusProgramStudi = "Sistem informasi dan proses bisnis";
@@ -46,7 +70,7 @@ switch ($programStudi) {
         $fokusProgramStudi = "Belum ditentukan";
 }
 
-
+// Status mahasiswa dengan operator ternary
 $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
 ?>
 
@@ -95,8 +119,7 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
         </p>
 
         <img
-          src="../foto.jpeg"
-          alt="Foto Profil Amel Ariyanti"
+          src="img/Foto.jpeg" alt="Foto Profil Amel Aryanti"
           width="200" />
       </section>
 
@@ -105,6 +128,7 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
 
         <article>
           <h3>Profil Singkat</h3>
+          <p>Asal daerah: Pangkalpinang, Bangka Belitung</p>
           <p>Sisa semester hingga batas: <?= $sisaSemester ?></p>
           <p>Pemeriksaan rentang semester: <?= $statusSemester ?></p>
           <p>Semester: <?= $semester ?> (<?= $keteranganSemester ?>)</p>
@@ -129,22 +153,25 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
           <h3>Target Belajar (Perulangan for)</h3>
           <ol>
             <?php
-            
-        for ($i = 1; $i <= 5; $i++) {
+            // Perulangan for tanpa array; materi larik dibahas pada 
+            for ($i = 1; $i <= 5; $i++) {
                 echo "<li>Target belajar ke-" . $i . ": ";
 
                 switch ($i) {
                     case 1:
-                        echo "Memahami sintaks dasar PHP.";
+                        echo "Memahami dasar-dasar HTML, CSS, dan JavaScript.";
                         break;
                     case 2:
-                        echo "Menggunakan variabel dan konstanta.";
+                        echo "Memahami cara menambahkan fungsi dan interaksi sederhana ke halaman web.";
                         break;
                     case 3:
-                        echo "Menerapkan operator dan percabangan.";
+                        echo "Mampu menyusun halaman web yang rapi dan terstruktur.";
                         break;
                     case 4:
-                        echo "Menggunakan perulangan for dan while.";
+                        echo "Menggunakan variabel, konstanta, dan operator dalam PHP.";
+                        break;
+                    case 5:
+                        echo "Menerapkan percabangan dan perulangan pada pemrograman web.";
                         break;
                     default:
                         echo "Belum dipetakan";
@@ -155,6 +182,15 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
             }
             ?>
           </ol>
+
+          <h3>Hobi</h3>
+          <ol>
+            <li>Membaca buku novel</li>
+            <li>Memasak</li>
+          </ol>
+
+          <h3>Motto Hidup</h3>
+          <p><i>"Setiap hari adalah kesempatan untuk belajar dan tumbuh."</i></p>
 
           <h3>Semester (Perulangan while)</h3>
           <ol>
@@ -171,18 +207,19 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
 
       <section id="contact">
         <h2>Kontak</h2>
-
+        <p>Email: 2622500008@mahasiswa.atmaluhur.ac.id</p>
         <p>
           Kunjungi
           <a
             target="_blank"
             rel="noopener noreferrer"
-          href="https://github.com/amelariyanti/2622500008-PWD-SI1A-2627o">profil GitHub saya</a>.
+            href="https://github.com/amelariyanti">profil GitHub saya</a>.
         </p>
 
         <form id="contactForm" action="index.php" method="get" novalidate>
           <div class="form-group">
-            <label for="nama">Nama Lengkap</label>
+            <label for="nama">Nama Lengkap</label></br>
+
             <input
               class="input-form"
               type="text"
@@ -195,77 +232,47 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              class="input-form"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="nama@email.com"
-              required />
+            <label for="email">Email</label></br>
+
+            <input class="input-form" type="email" id="email" name="email" 
+      placeholder="nama@email.com" required />
           </div>
 
           <div class="form-group">
             <label for="semester">Semester</label>
-            <input
-              class="input-form"
-              type="number"
-              id="semester"
-              name="semester"
-              min="1"
-              max="14"
-              required />
+
+            <input class="input-form" type="number" id="semester" name="semester" min="1" max="14"
+      required />
           </div>
 
           <div class="form-group">
-            <label for="tanggal">Tanggal Kunjungan</label>
-            <input
-              class="input-form"
-              type="date"
-              id="tanggal"
-              name="tanggal"
-              required />
+            <label for="tanggal">Tanggal Kunjungan</label></br>
+
+            <input class="input-form" type="date" id="tanggal" name="tanggal" required />
           </div>
 
-          <fieldset class="form-group">
+          <div class="form-group">
             <legend>Jenis Pesan</legend>
 
-            <input
-              type="radio"
-              id="pertanyaan"
-              name="jenis_pesan"
-              value="pertanyaan"
-              required />
+            <input type="radio" id="pertanyaan" name="jenis_pesan" value="pertanyaan" required />
             <label for="pertanyaan">Pertanyaan</label>
 
-            <input
-              type="radio"
-              id="saran"
-              name="jenis_pesan"
-              value="saran" />
+            <input type="radio" id="saran" name="jenis_pesan" value="saran" />
             <label for="saran">Saran</label>
-          </fieldset>
+          
+          <div class="form-group">
+            <p>Topik yang Diminati</p>
 
-          <fieldset class="form-group">
-            <legend>Topik yang Diminati</legend>
-
-            <input
-              type="checkbox"
-              id="minat-html"
-              name="minat"
-              value="HTML" />
+            <input type="checkbox" id="minat-html" name="minat" value="HTML" />
             <label for="minat-html">HTML</label>
 
-            <input
-              type="checkbox"
-              id="minat-css"
-              name="minat"
-              value="CSS" />
+            <input type="checkbox" id="minat-css" name="minat" value="CSS" />
             <label for="minat-css">CSS</label>
-          </fieldset>
+          </div>
 
           <div class="form-group">
             <label for="prodi">Program Studi</label>
+
             <select class="input-form" id="prodi" name="prodi" required>
               <option value="">-- Pilih Program Studi --</option>
               <option value="SI">Sistem Informasi</option>
@@ -275,6 +282,7 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
 
           <div class="form-group">
             <label for="pesan">Pesan</label>
+
             <textarea
               class="input-form"
               id="pesan"
@@ -293,7 +301,7 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
     </main>
 
     <footer>
-      <p>&copy; <?= date("Y") ?> <?= $namaMahasiswa ?> [<?= $nim ?>]</p>
+      <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa ?> [<?= $nim ?>]</p>
     </footer>
 
     <script src="script.js"></script>
