@@ -5,7 +5,7 @@
     git commit -m "menyalin artefak pertemuan-07 ke pertemuan-10 sebagai baseline"
     git push
 2. aktifin phpMyAdmin 
-###  C.1 (Data apa saja yg ada di formulir)
+###  C.1. (Data apa saja yg ada di formulir)
 3. dari formulir p7 data formulir yang ada diformulir p7
     saya sudah cek file index.php`. pada formulir kontak ternyata ada 8 data yg dikirim kalau saya pencet tombol kirim itu ada 8 data yg muncul dibagian data pladen.
 
@@ -20,13 +20,13 @@
     8. Pesan : cobacoba
 jadi, ada 8 data yang dikirim dari formulir. semuanya sudah sesuai dengan yg ada dikode index.php`.
 
-### C.2 (data mana yg disimpan ke database?)
+### C.2. (data mana yg disimpan ke database?)
 data yg disimpan ke database itu cuma 8 data dari formulir diatas saja.
 yaitu nama, email, semester, tanggal, jenis_pesan, minat, prodi, dan pesan. 
 
 Data profil  yang diatas halaman, seperti NIM, itu tidak disimpan karena itu bukan isi formulir.
 
-### C.3 (kalau pada bagian minatnya dipilih lebih dari 1, bagaimana?)
+### C.3. (kalau pada bagian minatnya dipilih lebih dari 1, bagaimana?)
 didlm formuir saya, pada bagian topik yg minat bisa dicentang lebih dari 1. ada HTM  dan CSS.
 
 Kalau yang dicentang cuma 1, contohnya seperti punya saya tadi yg  disimpan itu cuma : CSS
@@ -78,17 +78,21 @@ jadi di database, minat itu cuman cuma jadi 1 kolom saja, isinya teks gabungan
  Rancangan ini sudah dicek
 
  ### D. MEMBUAT DAN MENGUJI BERKAS KONEKSI PHP-MYSQL
- ##  D.1 Membuat berkas koneksi.php P11
+ ##  D.1. Membuat berkas koneksi.php P11
  - Berkas `koneksi.php` sudah dibuat dan sejajar dengan `index.php`
  - parameter: host `localhost`, username `root`, password `""`, Database `db_pwd_2622500008`
 
- ## D.2 pemeriksaan parameter koneksi P11
+ ## D.2. pemeriksaan parameter koneksi P11
  - File `koneksi.php` sudah diperiksa, 4 parameter sudah benar
  - Host: `localhost` - MySQL berjalan dikomputer lokal
  - Username: `root` - pengguna MySQL lokal
  - Password: `""` - kata sandi dikosongkan sesuai konfigurasi lokal
  - Database: `db_pwd_2622500008` - sudah sesuai dengan database yang dibuat di P10
  - Kesimpulan: tidak ada kesalahan penulisan, siap untuk menghubungkan PHP ke MySQL
+
+## D.3. Mengatur Pelaporan Kesalahan MySQLi P11
+- sudah menambahkan `mysqli_report(MYSQLI_REPORT_OFF);` setelah deklarasi  parameter di `koneksi.php`
+- Fungsinya menonaktifkan pelaporan kesalahan otomatis MySQLi agar kegagalan bisa diperiksa manual dengan `if`
 
 
 
