@@ -82,6 +82,14 @@ jadi di database, minat itu cuman cuma jadi 1 kolom saja, isinya teks gabungan
  - Berkas `koneksi.php` sudah dibuat dan sejajar dengan `index.php`
  - parameter: host `localhost`, username `root`, password `""`, Database `db_pwd_2622500008`
 
+ ## D.2 pemeriksaan parameter koneksi P11
+ - File `koneksi.php` sudah diperiksa, 4 parameter sudah benar
+ - Host: `localhost` - MySQL berjalan dikomputer lokal
+ - Username: `root` - pengguna MySQL lokal
+ - Password: `""` - kata sandi dikosongkan sesuai konfigurasi lokal
+ - Database: `db_pwd_2622500008` - sudah sesuai dengan database yang dibuat di P10
+ - Kesimpulan: tidak ada kesalahan penulisan, siap untuk menghubungkan PHP ke MySQL
+
 
 
 ## E. Pemeriksaan Kesiapan Basis Data P11
