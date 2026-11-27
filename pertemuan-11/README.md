@@ -1,4 +1,5 @@
 # pertemuan-11
+### B. persiapan pengembangan P11
 # pertemuan-10
 1.  git add .
     git commit -m "menyalin artefak pertemuan-07 ke pertemuan-10 sebagai baseline"
@@ -46,7 +47,7 @@ jadi di database, minat itu cuman cuma jadi 1 kolom saja, isinya teks gabungan
 | --- | --- | --- | --- |
 | 1 | nama | VARCHAR(40) Nama, maks 40 huruf |
 | 2 | email | VARCHAR(250) | Email |
-| 3 | semester | TINYVINT | Angka semester yang kecil, contoh: 1 |
+| 3 | semester | TINYINT | Angka semester yang kecil, contoh: 1 |
 | 4 | tanggal | DATE | Tanggal, contoh: 2026-11-24 |
 | 5 | jenis_pesan | VARCHAR(15) | jenis pesan, contoh: saran |
 | 6 | minat | VARCHAR(40) | Minat, disimpan jadi 1 teks |
@@ -74,7 +75,12 @@ jadi di database, minat itu cuman cuma jadi 1 kolom saja, isinya teks gabungan
  8. prodi - VARCHAR(2)
  9. pesan - VARCHAR(300)
 
- Rancangan ini sudah dicek dan sudah siap untuk dibuat di phpMyAdmin pada Bagian E.
+ Rancangan ini sudah dicek
+
+ ### D. MEMBUAT DAN MENGUJI BERKAS KONEKSI PHP-MYSQL
+ ##  D.1 Membuat berkas koneksi.php P11
+ - Berkas `koneksi.php` sudah dibuat dan sejajar dengan `index.php`
+ - parameter: host `localhost`, username `root`, password `""`, Database `db_pwd_2622500008`
 
 
 
